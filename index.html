@@ -35,9 +35,20 @@
      
     
       <div class="product-card row-layout">
-  <div class="product-image">
-    <img src="images/fallback.png" alt="All Services Flyer">
-  </div>
+        <!-- Your Flyer Image -->
+          <!-- Normal Flyer Image -->
+      <a href="#flyer-popup">
+        <img src="images/fallback.png" alt="All Services Flyer" class="flyer-thumb">
+      </a>
+
+      <!-- Fullscreen Pop-Out Flyer -->
+      <div id="flyer-popup" class="flyer-modal">
+        <a href="#" class="flyer-close">&times;</a>
+        <img src="images/fallback.png" alt="All Services Flyer Enlarged" class="flyer-full">
+      </div>
+
+
+
   <div class="product-details">
     <h2>All Services Flyer</h2>
     <form action="https://hooks.zapier.com/hooks/catch/12716030/uylxl5q/" method="POST" target="_blank" class="order-form">

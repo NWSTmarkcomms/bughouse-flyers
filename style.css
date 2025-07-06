@@ -154,3 +154,60 @@ body {
 .button:hover {
   background-color: #900;
 }
+
+/* Thumbnail styling */
+.flyer-thumb {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  cursor: zoom-in;
+  transition: transform 0.2s ease;
+}
+
+.flyer-thumb:hover {
+  transform: scale(1.03);
+}
+
+/* Pop-out modal styling */
+.flyer-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.flyer-modal:target {
+  display: flex;
+}
+
+.flyer-full {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.flyer-close {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  color: white;
+  font-size: 2.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+

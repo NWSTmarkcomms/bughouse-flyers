@@ -47,7 +47,7 @@
     <h2>All Services Flyer</h2>
 
     <!-- ✅ START: Updated Form Block -->
-    <form action="https://hooks.zapier.com/hooks/catch/your-webhook-id/?redirect_to=thank-you.html" method="POST">
+   <form action="https://hooks.zapier.com/hooks/catch/your-webhook-id/" method="POST" target="hiddenZapierFrame">
       <input type="text" name="fullName" placeholder="Manager Name" required>
       <input type="email" name="email" placeholder="Manager Email" required>
 
@@ -77,7 +77,8 @@
 
       <input type="hidden" name="product" value="All Services Flyer">
       
-     <button type="submit">Request</button>
+    <button type="submit" formtarget="_self" formaction="thank-you.html">Request</button>
+
 
     </form>
     <!-- ✅ END: Updated Form Block -->

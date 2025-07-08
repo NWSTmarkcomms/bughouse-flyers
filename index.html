@@ -34,20 +34,17 @@
   <main>
     <section class="product-grid">
 
-     
-    
-<div class="product-card row-layout">
-  <div class="product-image">
-    <a href="#flyer-popup">
-      <img src="images/fallback.png" alt="All Services Flyer" class="flyer-thumb">
-    </a>
-  </div>
 
   <div class="product-details">
     <h2>All Services Flyer</h2>
 
     <!-- ✅ START: Updated Form Block -->
-<form action="https://hooks.zapier.com/hooks/catch/12716030/uodfhsh/" method="POST" target="hiddenZapierFrame" onsubmit="window.location.href='https://bughousesuccess.netlify.app/index.html';">
+<form 
+  action="https://hooks.zapier.com/hooks/catch/12716030/uodfhsh/" 
+  method="POST" 
+  target="hiddenZapierFrame"
+  onsubmit="window.open('https://bughousesuccess.netlify.app/index.html', '_blank')">
+  
   <input type="text" name="fullName" placeholder="Manager Name" required>
   <input type="email" name="email" placeholder="Manager Email" required>
 
@@ -79,6 +76,7 @@
   <button type="submit">Request</button>
 </form>
 
+<!-- Hidden iframe to process Zapier webhook -->
 <iframe name="hiddenZapierFrame" style="display:none;"></iframe>
 
     <!-- ✅ END: Updated Form Block -->
@@ -109,11 +107,12 @@
     }
   </script>
 
-<!-- Fullscreen Pop-Out Flyer -->
+<!-- Popup Zoomed Image -->
 <div id="flyer-popup" class="flyer-modal">
   <a href="#" class="flyer-close">&times;</a>
-  <img src="images/fallback.png" alt="Preview of All Services Flyer" class="flyer-full">
+  <img src="images/fallback.png" alt="Full Flyer Preview" class="flyer-full">
 </div>
+
 
 <!-- Hidden iframe to capture Zapier JSON response -->
 <iframe name="hiddenZapierFrame" style="display: none;"></iframe>

@@ -176,7 +176,7 @@ body {
   top: 0; left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.95);   /* Previously 0.85 */
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -189,10 +189,10 @@ body {
 
 .flyer-full {
   width: auto;
-  max-width: 1400px;
+  max-width: 90vw;     /* Updated from 1400px */
   max-height: 90vh;
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+  box-shadow: 0 0 30px rgba(255,255,255,0.3);
   animation: zoomIn 0.3s ease;
 }
 

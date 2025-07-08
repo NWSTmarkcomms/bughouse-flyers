@@ -47,47 +47,40 @@
     <h2>All Services Flyer</h2>
 
     <!-- ✅ START: Updated Form Block -->
- <form action="https://hooks.zapier.com/hooks/catch/YOUR-ZAPIER-HOOK-ID" method="POST" target="hiddenZapierFrame">
-  <!-- your form fields -->
-  <button type="submit" formaction="https://bughousesuccess.netlify.app/index.html">Request</button>
+<form action="https://hooks.zapier.com/hooks/catch/YOUR-ZAPIER-HOOK-ID" method="POST" target="hiddenZapierFrame" onsubmit="window.location.href='https://bughousesuccess.netlify.app/index.html';">
+  <input type="text" name="fullName" placeholder="Manager Name" required>
+  <input type="email" name="email" placeholder="Manager Email" required>
+
+  <select name="Quantity" required>
+    <option value="" disabled selected>Select Quantity</option>
+    <option value="100">100</option>
+    <option value="250">250</option>
+    <option value="500">500</option>
+    <option value="1000">1000</option>
+    <option value="2000">2000</option>
+  </select>
+
+  <select name="office" required>
+    <option value="" disabled selected>Select Office</option>
+    <option value="Augusta - BHPC">Augusta - BHPC</option>
+    <option value="Carrollton - BHPC">Carrollton - BHPC</option>
+    <option value="Dublin - BHPC">Dublin - BHPC</option>
+    <option value="Eastman - BHPC">Eastman - BHPC</option>
+    <option value="Greensboro - BHPC">Greensboro - BHPC</option>
+    <option value="Macon - BHPC">Macon - BHPC</option>
+    <option value="Madison - BHPC">Madison - BHPC</option>
+    <option value="Milledgeville - BHPC">Milledgeville - BHPC</option>
+    <option value="St. Simons Island - BHPC">St. Simons Island - BHPC</option>
+    <option value="Warner Robbins - BHPC">Warner Robbins - BHPC</option>
+    <option value="Watkinsville - BHPC">Watkinsville - BHPC</option>
+  </select>
+
+  <input type="hidden" name="product" value="All Services Flyer">
+  <button type="submit">Request</button>
 </form>
 
 <iframe name="hiddenZapierFrame" style="display:none;"></iframe>
 
-      <input type="text" name="fullName" placeholder="Manager Name" required>
-      <input type="email" name="email" placeholder="Manager Email" required>
-
-      <select name="Quantity" required>
-        <option value="" disabled selected>Select Quantity</option>
-        <option value="100">100</option>
-        <option value="250">250</option>
-        <option value="500">500</option>
-        <option value="1000">1000</option>
-        <option value="2000">2000</option>
-      </select>
-
-      <select name="office" required>
-        <option value="" disabled selected>Select Office</option>
-      <option value="Augusta - BHPC">Augusta - BHPC</option>
-      <option value="Carrollton - BHPC">Carrollton - BHPC</option>
-      <option value="Dublin - BHPC">Dublin - BHPC</option>
-      <option value="Eastman - BHPC">Eastman - BHPC</option>
-      <option value="Greensboro - BHPC">Greensboro - BHPC</option>
-      <option value="Macon - BHPC">Macon - BHPC</option>
-      <option value="Madison - BHPC">Madison - BHPC</option>
-      <option value="Milledgeville - BHPC">Milledgeville - BHPC</option>
-      <option value="St. Simons Island - BHPC">St. Simons Island - BHPC</option>
-      <option value="Warner Robbins - BHPC">Warner Robbins - BHPC</option>
-      <option value="Watkinsville - BHPC">Watkinsville - BHPC</option>
-          </select>
-
-      <input type="hidden" name="product" value="All Services Flyer">
-      
-    <button type="submit" formtarget="_self" formaction="https://bughousesuccess.netlify.app/index.html">Request</button>
-
-
-
-    </form>
     <!-- ✅ END: Updated Form Block -->
 
   </div>

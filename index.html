@@ -47,7 +47,13 @@
     <h2>All Services Flyer</h2>
 
     <!-- ✅ START: Updated Form Block -->
-   <form action="https://hooks.zapier.com/hooks/catch/your-webhook-id/" method="POST" target="hiddenZapierFrame">
+ <form action="https://hooks.zapier.com/hooks/catch/YOUR-ZAPIER-HOOK-ID" method="POST" target="hiddenZapierFrame">
+  <!-- your form fields -->
+  <button type="submit" formaction="https://bughousesuccess.netlify.app/index.html">Request</button>
+</form>
+
+<iframe name="hiddenZapierFrame" style="display:none;"></iframe>
+
       <input type="text" name="fullName" placeholder="Manager Name" required>
       <input type="email" name="email" placeholder="Manager Email" required>
 
@@ -77,7 +83,8 @@
 
       <input type="hidden" name="product" value="All Services Flyer">
       
-    <button type="submit" formtarget="_self" formaction="thank-you.html">Request</button>
+    <button type="submit" formtarget="_self" formaction="https://bughousesuccess.netlify.app/index.html">Request</button>
+
 
 
     </form>

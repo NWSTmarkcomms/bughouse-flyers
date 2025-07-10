@@ -7,13 +7,12 @@
   <link rel="stylesheet" href="style.css"/>
 </head>
 
-<body> <!-- START BODY TAG -->
-
+<body>
 <header class="header">
   <div class="logo-nav-container">
     <img src="images/logo-placeholder.png" alt="Bug House Logo" class="logo">
     <nav class="navbar">
-     <a href="https://bughouse-marketing-print.netlify.app/" target="_blank" rel="noopener noreferrer">Home</a>
+      <a href="https://bughouse-marketing-print.netlify.app/" target="_blank" rel="noopener noreferrer">Home</a>
       <a href="https://bughouse-marketing-print.netlify.app/" target="_blank" rel="noopener noreferrer">Catalog</a>
       <a href="https://bughouse-leavebehinds.netlify.app/leave-behinds.html" target="_blank" rel="noopener noreferrer">Leave Behinds</a>
       <a href="https://bughouse-door-hangers.netlify.app/" target="_blank" rel="noopener noreferrer">Door Hangers</a>
@@ -25,133 +24,63 @@
   </div>
 </header>
 
-
 <section class="hero-banner">
   <h1 class="hero-title">Marketing Material Portal</h1>
 </section>
 
-
-  <main>
+<main>
   <section class="product-grid">
+    <div class="product-card row-layout">
+      <!-- Image on the Left -->
+      <div class="flyer-thumb-container">
+        <a href="images/sample-flyer.jpg" target="_blank">
+          <img src="images/sample-flyer.jpg" alt="All Services Flyer" class="flyer-thumb">
+        </a>
+      </div>
 
-  <!-- Product 1 -->
- <!-- START of cleaned-up index.html -->
-<div class="product-card row-layout">
-  <!-- Thumbnail on Left -->
-  <div class="flyer-thumb-container">
-    <a href="#flyer-popup">
-      <img src="images/sample-thumb.jpg" alt="All Services Flyer Sample" class="flyer-thumb">
-    </a>
-  </div>
-
-
-  <div class="product-details">
-   <h2>All Services Flyer</h2>
-
-<div class="product-card">
-  <div class="product-content">
-    <!-- Thumbnail on Left -->
-    <div class="flyer-thumb-container">
-      <a href="#flyer-popup">
-        <img src="images/fallback.png" alt="All Services Flyer Sample" class="flyer-thumb">
-      </a>
+      <!-- Form on the Right -->
+      <div class="product-details">
+        <h2>All Services Flyer</h2>
+        <form 
+          action="https://hooks.zapier.com/hooks/catch/12716030/uodfhsh/" 
+          method="POST" 
+          target="hiddenZapierFrame"
+          onsubmit="window.open('https://bughousesuccess.netlify.app/index.html', '_blank')"
+        >
+          <input type="text" name="fullName" placeholder="Manager Name" required>
+          <input type="email" name="email" placeholder="Manager Email" required>
+          <select name="Quantity" required>
+            <option value="" disabled selected>Select Quantity</option>
+            <option value="100">100</option>
+            <option value="250">250</option>
+            <option value="500">500</option>
+            <option value="1000">1000</option>
+          </select>
+          <select name="office" required>
+            <option value="" disabled selected>Select Office</option>
+            <option value="Augusta - BHPC">Augusta - BHPC</option>
+            <option value="Carrollton - BHPC">Carrollton - BHPC</option>
+            <option value="Dublin - BHPC">Dublin - BHPC</option>
+            <option value="Eastman - BHPC">Eastman - BHPC</option>
+            <option value="Greensboro - BHPC">Greensboro - BHPC</option>
+            <option value="Macon - BHPC">Macon - BHPC</option>
+            <option value="Madison - BHPC">Madison - BHPC</option>
+            <option value="Milledgeville - BHPC">Milledgeville - BHPC</option>
+            <option value="St. Simons Island - BHPC">St. Simons Island - BHPC</option>
+            <option value="Warner Robbins - BHPC">Warner Robbins - BHPC</option>
+            <option value="Watkinsville - BHPC">Watkinsville - BHPC</option>
+          </select>
+          <input type="hidden" name="product" value="All Services Flyer">
+          <button type="submit">Request</button>
+        </form>
+      </div>
     </div>
-
-    <!-- Form on Right -->
-    <div class="product-details">
-      <h2>All Services Flyer</h2>
-      <form 
-        action="https://hooks.zapier.com/hooks/catch/12716030/uodfhsh/" 
-        method="POST" 
-        target="hiddenZapierFrame"
-        onsubmit="window.open('https://bughousesuccess.netlify.app/index.html', '_blank')"
-      >
-        <input type="text" name="fullName" placeholder="Manager Name" required>
-        <input type="email" name="email" placeholder="Manager Email" required>
-
-        <select name="Quantity" required>
-          <option value="" disabled selected>Select Quantity</option>
-          <option value="100">100</option>
-          <option value="250">250</option>
-          <option value="500">500</option>
-          <option value="1000">1000</option>
-          <option value="2000">2000</option>
-        </select>
-
-        <select name="office" required>
-          <option value="" disabled selected>Select Office</option>
-          <option value="Augusta - BHPC">Augusta - BHPC</option>
-          <option value="Carrollton - BHPC">Carrollton - BHPC</option>
-          <option value="Dublin - BHPC">Dublin - BHPC</option>
-          <option value="Eastman - BHPC">Eastman - BHPC</option>
-          <option value="Greensboro - BHPC">Greensboro - BHPC</option>
-          <option value="Macon - BHPC">Macon - BHPC</option>
-          <option value="Madison - BHPC">Madison - BHPC</option>
-          <option value="Milledgeville - BHPC">Milledgeville - BHPC</option>
-          <option value="St. Simons Island - BHPC">St. Simons Island - BHPC</option>
-          <option value="Warner Robbins - BHPC">Warner Robbins - BHPC</option>
-          <option value="Watkinsville - BHPC">Watkinsville - BHPC</option>
-        </select>
-
-        <input type="hidden" name="product" value="All Services Flyer">
-        <button type="submit">Request</button>
-      </form>
-    </div>
-  </div>
-</div>
-
-<!-- Popup Fullscreen Flyer -->
-<div id="flyer-popup" class="flyer-modal">
-  <a href="#" class="flyer-close">&times;</a>
-  <img src="images/sample-thumb.jpg" alt="Full Flyer Preview" class="flyer-full">
-</div>
-
-<iframe name="hiddenZapierFrame" style="display:none;"></iframe>
-<!-- END of cleaned-up index.html -->
-
-
-
-<!-- Hidden iframe to process Zapier webhook -->
-<iframe name="hiddenZapierFrame" style="display:none;"></iframe>
-
-    <!-- ✅ END: Updated Form Block -->
-
-  </div>
-</div>
-
-
+    <iframe name="hiddenZapierFrame" style="display:none;"></iframe>
+  </section>
 </main>
 
-    
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 Bug House Pest Control — Live Healthier Today</p>
-  </footer>
-  <script>
-    function handleSubmit(event, form) {
-      setTimeout(() => {
-        const parent = form.parentElement;
-        parent.innerHTML = `
-          <div class="thank-you-message">
-            <p>✅ You Make Pest Control Look Good! Your order will arrive at your office in less than 2 weeks. Thank you! </p>
-          </div>
-        `;
-      }, 500);
-    }
-  </script>
-
-<!-- Popup Zoomed Image -->
-<div id="flyer-popup" class="flyer-modal">
-  <a href="#" class="flyer-close">&times;</a>
-  <img src="images/fallback.png" alt="Full Flyer Preview" class="flyer-full">
-</div>
-
-
-<!-- Hidden iframe to capture Zapier JSON response -->
-<iframe name="hiddenZapierFrame" style="display: none;"></iframe>
-
+<footer>
+  <p>© 2025 Bug House Pest Control — Live Healthier Today</p>
+</footer>
 </body>
-
 </html>

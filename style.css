@@ -50,6 +50,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   padding: 2rem;
+  justify-items: center;
 }
 
 .product-card {
@@ -61,6 +62,8 @@ body {
   flex-direction: column;
   gap: 1.5rem;
   transition: transform 0.3s ease;
+  max-width: 350px;
+  width: 100%;
 }
 
 .product-card:hover {
@@ -106,9 +109,9 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  background: #f9f9f9;
-  padding: 1rem;
-  border-radius: 8px;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
 }
 
 .product-details input,
@@ -117,6 +120,11 @@ body {
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 6px;
+}
+
+.product-details input::placeholder {
+  color: #000;
+  opacity: 1;
 }
 
 .product-details input:focus,

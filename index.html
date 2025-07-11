@@ -47,12 +47,11 @@
 
 
         <div class="product-details">
-                <form 
-        action="https://hooks.zapier.com/hooks/catch/12716030/uodfhsh/" 
-        method="POST" 
-        target="hiddenZapierFrame"
-        onsubmit="window.open('https://bughousesuccess.netlify.app/index.html', '_blank')"
-      >
+               <form 
+                  id="zapierForm"
+                  action="https://hooks.zapier.com/hooks/catch/12716030/uodfhsh/" 
+                  method="POST"
+                >
           
           <form action="https://hooks.zapier.com/hooks/catch/12716030/uodfhsh/" method="POST" target="_blank">
             <input type="text" name="fullName" placeholder="Manager Name" required>
@@ -81,6 +80,25 @@
             <input type="hidden" name="product" value="All Services Flyer">
             <button type="submit">Request</button>
           </form>
+
+          <script>
+  document.getElementById("zapierForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+
+    fetch(form.action, {
+      method: "POST",
+      body: data,
+    }).then(() => {
+      window.location.href = "https://bughousesuccess.netlify.app/index.html";
+    }).catch((err) => {
+      alert("Oops! Something went wrong.");
+      console.error(err);
+    });
+  });
+</script>
+
         </div>
       </div>
     </section>

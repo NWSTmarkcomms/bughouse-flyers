@@ -191,3 +191,27 @@ body {
 .button:hover {
   background-color: #900;
 }
+
+.section-title {
+  grid-column: 1 / -1;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: -1rem;
+  color: #222;
+}
+
+.product-details h2 {
+  font-size: 1.25rem;
+  color: #b00;
+  margin-bottom: 0.5rem;
+}
+
+.product-details form {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.product-details button {
+  margin-top: 0.75rem;
+}

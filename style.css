@@ -84,6 +84,19 @@ body {
   }
 }
 
+@media (min-width: 601px) {
+  .product-card.row-layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .flyer-thumb-container,
+  .product-details {
+    max-width: none;
+    width: auto;
+  }
+}
+
 .product-card {
   background: white;
   border-radius: 12px;
@@ -95,12 +108,10 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* ✅ Row layout with image left and form right */
 .product-card.row-layout {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  flex-direction: row;
   align-items: flex-start;
   background: white;
   padding: 2rem;
@@ -119,6 +130,8 @@ body {
   justify-content: center;
   align-items: center;
   max-width: 250px;
+  overflow: hidden;
+  position: relative;
 }
 
 .flyer-thumb {
@@ -128,11 +141,14 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   cursor: zoom-in;
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease;
+  object-fit: cover;
+  transform-origin: center;
+  will-change: transform;
 }
 
-.flyer-thumb:hover {
-  transform: scale(1.03);
+.flyer-thumb-container:hover .flyer-thumb {
+  transform: scale(1.5);
 }
 
 .product-details {

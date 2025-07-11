@@ -110,13 +110,14 @@ body {
 
 .product-card.row-layout {
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
+  flex-direction: row;
   align-items: flex-start;
-  background: white;
+  gap: 2rem;
   padding: 2rem;
+  background: white;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
 }
 
 .product-card:hover {
@@ -125,30 +126,28 @@ body {
 }
 
 .flyer-thumb-container {
-  flex: 1 1 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  flex: 1 1 250px;
   max-width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
-  position: relative;
 }
+
 
 .flyer-thumb {
   width: 100%;
-  max-width: 200px;
+  max-width: 100%;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   cursor: zoom-in;
   transition: transform 0.3s ease;
-  object-fit: cover;
-  transform-origin: center;
-  will-change: transform;
 }
 
 .flyer-thumb-container:hover .flyer-thumb {
   transform: scale(1.5);
+  transform-origin: center;
 }
 
 .product-details {

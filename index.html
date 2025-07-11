@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bug House Marketing Portal</title>
+  <title>Modern Marketing Portal</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
-
 <body>
-<header class="header">
-  <div class="logo-nav-container">
+  <header class="header">
+    <div class="logo-nav-container">
     <img src="images/logo-placeholder.png" alt="Bug House Logo" class="logo">
     <nav class="navbar">
       <a href="https://bughouse-marketing-print.netlify.app/" target="_blank" rel="noopener noreferrer">Home</a>
@@ -21,53 +20,41 @@
       <a href="https://bughouseflyers.netlify.app/" target="_blank" rel="noopener noreferrer">Flyers</a>
       <a href="https://bughouse-quest.netlify.app/" target="_blank" rel="noopener noreferrer">Questions</a>
     </nav>
-  </div>
-</header>
-
-<section class="hero-banner">
-  <h1 class="hero-title">Marketing Material Portal</h1>
-</section>
-
-<main>
-  <section class="product-grid">
-
-<div class="product-card">
-  <!-- Product Title (top of box) -->
-  <h2 class="product-title">All Services Flyer</h2>
-
-  <!-- Inner Row: Image + Form -->
-  <div class="row-layout">
-    <!-- Left -->
-    <div class="flyer-thumb-container">
-      <a href="images/fallback.png" target="_blank">
-        <img 
-          src="images/fallback.png" 
-          alt="All Services Flyer" 
-          class="flyer-thumb"
-          onerror="this.onerror=null; this.src='images/fallback.png';"
-        />
-      </a>
     </div>
+  </header>
 
-  <!-- 📋 Form on the Right -->
-  <div class="product-details">
-      <form 
+  <section class="hero-banner">
+    <h1 class="hero-title">Marketing Material Portal</h1>
+  </section>
+
+  <main>
+    <section class="product-grid">
+      <div class="product-card row-layout">
+        <div class="product-image">
+          <a href="images/fallback.png" target="_blank">
+            <img src="images/fallback.png" alt="All Services Flyer" class="flyer-thumb"/>
+          </a>
+        </div>
+        <div class="product-details">
+                <form 
         action="https://hooks.zapier.com/hooks/catch/12716030/uodfhsh/" 
         method="POST" 
         target="hiddenZapierFrame"
         onsubmit="window.open('https://bughousesuccess.netlify.app/index.html', '_blank')"
       >
-        <input type="text" name="fullName" placeholder="Manager Name" required>
-        <input type="email" name="email" placeholder="Manager Email" required>
-        <select name="Quantity" required>
-          <option value="" disabled selected>Select Quantity</option>
-          <option value="100">100</option>
-          <option value="250">250</option>
-          <option value="500">500</option>
-          <option value="1000">1000</option>
-        </select>
-        <select name="office" required>
-          <option value="" disabled selected>Select Office</option>
+          <h2 class="product-title">All Services Flyer</h2>
+          <form action="https://hooks.zapier.com/hooks/catch/12716030/uodfhsh/" method="POST" target="_blank">
+            <input type="text" name="fullName" placeholder="Manager Name" required>
+            <input type="email" name="email" placeholder="Manager Email" required>
+            <select name="Quantity" required>
+              <option value="" disabled selected>Select Quantity</option>
+              <option value="100">100</option>
+              <option value="250">250</option>
+              <option value="500">500</option>
+              <option value="1000">1000</option>
+            </select>
+            <select name="office" required>
+              <option value="" disabled selected>Select Office</option>
         <option value="Augusta - BHPC">Augusta - BHPC</option>
         <option value="Carrollton - BHPC">Carrollton - BHPC</option>
         <option value="Dublin - BHPC">Dublin - BHPC</option>
@@ -79,20 +66,17 @@
         <option value="St. Simons Island - BHPC">St. Simons Island - BHPC</option>
         <option value="Warner Robbins - BHPC">Warner Robbins - BHPC</option>
         <option value="Watkinsville - BHPC">Watkinsville - BHPC</option>
-    </select>
-        <input type="hidden" name="product" value="All Services Flyer">
-        <button type="submit">Request</button>
-      </form>
-    </div>
-  </div>
-</div>
+            </select>
+            <input type="hidden" name="product" value="All Services Flyer">
+            <button type="submit">Request</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <iframe name="hiddenZapierFrame" style="display:none;"></iframe>
-  </section>
-</main>
-
-<footer>
-  <p>© 2025 Bug House Pest Control — Live Healthier Today</p>
-</footer>
+  <footer>
+    <p>© 2025 Bug House Pest Control — Live Healthier Today</p>
+  </footer>
 </body>
 </html>

@@ -215,3 +215,12 @@ body {
 .product-details button {
   margin-top: 0.75rem;
 }
+
+.product-card .product-title {
+  flex-basis: 100%;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #b00;
+  margin: 0 0 1rem;
+}
+

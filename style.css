@@ -199,3 +199,27 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === FLYER ZOOM STYLES (HOVER TO MAGNIFY) === */
+.flyer-zoom-wrapper {
+  position: relative;
+  overflow: hidden;
+  max-width: 300px;
+  width: 100%;
+  cursor: zoom-in;
+}
+
+.flyer-zoom {
+  transition: transform 0.4s ease, transform-origin 0.4s ease;
+  transform-origin: center;
+}
+
+.flyer-zoom-wrapper:hover .flyer-zoom {
+  transform: scale(2.5); /* Adjust zoom level here */
+}

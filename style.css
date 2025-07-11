@@ -149,6 +149,37 @@ body {
   background-color: #900;
 }
 
+.row-layout {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.product-title {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #b00;
+  padding-left: 0.5rem;
+}
+
+.product-image {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1 1 250px;
+  max-width: 300px;
+}
+
+.product-details {
+  flex: 2 1 300px;
+}
+
+
 @media (max-width: 1024px) {
   .product-grid {
     grid-template-columns: repeat(2, 1fr);

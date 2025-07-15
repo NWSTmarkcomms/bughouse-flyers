@@ -3,16 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Modern Marketing Portal</title>
-  <link rel="stylesheet" href="style.css"/>
+  <title>Product Flyers</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+    <iframe name="hiddenFrame" style="display:none;"></iframe>
+    
   <header class="header">
     <div class="logo-nav-container">
-    <img src="images/logo-placeholder.png" alt="Bug House Logo" class="logo">
+      <img src="images/logo-placeholder.png" alt="Company Logo" class="logo" />
     <nav class="navbar">
-      <a href="https://bughouse-marketing-print.netlify.app/" target="_blank" rel="noopener noreferrer">Home</a>
-      <a href="https://bughouse-marketing-print.netlify.app/" target="_blank" rel="noopener noreferrer">Catalog</a>
+      <a href="https://bughouse-catalog.netlify.app/" target="_blank" rel="noopener noreferrer">Home</a>
+      <a href="https://bughouse-catalog.netlify.app/" target="_blank" rel="noopener noreferrer">Catalog</a>
       <a href="https://bughouse-leavebehinds.netlify.app/leave-behinds.html" target="_blank" rel="noopener noreferrer">Leave Behinds</a>
       <a href="https://bughouse-door-hangers.netlify.app/" target="_blank" rel="noopener noreferrer">Door Hangers</a>
       <a href="https://bughouse-thank-you-cards.netlify.app/" target="_blank" rel="noopener noreferrer">Thank You Cards</a>
@@ -27,35 +30,33 @@
     <h1 class="hero-title">Marketing Material Portal</h1>
   </section>
 
-  <main>
-    <section class="product-grid">
-      <div class="product-card">
-        <h2 class="product-title">All Services Flyer</h2>
-        <div class="row-layout">
+  <main class="product-grid">
+    
 
+    <div class="product-card">
+      <h2 class="product-title">All Services Flyer</h2>
+
+        <div class="row-layout">
         <div class="flyer-expand-toggle">
-        <input type="checkbox" id="expandToggle" class="expand-checkbox" hidden>
-        <label for="expandToggle" class="flyer-thumb-container">
-          <img src="images/fallback.png" alt="All Services Flyer" class="flyer-thumb" />
-        </label>
-        <div class="flyer-expanded-view">
-          <label for="expandToggle">
+          <input type="checkbox" id="expand-all-services-flyer" class="expand-checkbox" hidden>
+          <label for="expand-all-services-flyer" class="flyer-thumb-container">
+            <img src="images/fallback.jpg" alt="All Services Flyer" class="flyer-thumb top-left" />
+          </label>
+          <label for="expand-all-services-flyer" class="flyer-expanded-view">
+            <button class="flyer-close-button" aria-label="Close">&times;</button>
             <img src="images/fallback.png" alt="All Services Flyer" class="flyer-expanded-img" />
           </label>
-        </div>
-        </div>
-
-
-        <div class="product-details">
-               <form 
-                  id="zapierForm"
-                  action="https://hooks.zapier.com/hooks/catch/12716030/uodfhsh/" 
-                  method="POST"
-                >
+          </div>
           
-          <form action="https://hooks.zapier.com/hooks/catch/12716030/uodfhsh/" method="POST" target="_blank">
-            <input type="text" name="fullName" placeholder="Manager Name" required>
-            <input type="email" name="email" placeholder="Manager Email" required>
+        <div class="product-details">
+      <form 
+        action="https://hooks.zapier.com/hooks/catch/12716030/uodfhsh/" 
+        method="POST" 
+        target="hiddenFrame"
+        onsubmit="setTimeout(() => { window.location.href = 'https://bughousesuccess.netlify.app/'; }, 1000);"
+      >
+            <input type="text" name="fullName" placeholder="Manager Name" required />
+            <input type="email" name="email" placeholder="Manager Email" required />
             <select name="Quantity" required>
               <option value="" disabled selected>Select Quantity</option>
               <option value="100">100</option>
@@ -73,39 +74,52 @@
         <option value="Macon - BHPC">Macon - BHPC</option>
         <option value="Madison - BHPC">Madison - BHPC</option>
         <option value="Milledgeville - BHPC">Milledgeville - BHPC</option>
-        <option value="St. Simons Island - BHPC">St. Simons - BHPC</option>
+        <option value="St. Simons - BHPC">St. Simons - BHPC</option>
         <option value="Warner Robbins - BHPC">Warner Robbins - BHPC</option>
         <option value="Watkinsville - BHPC">Watkinsville - BHPC</option>
             </select>
-            <input type="hidden" name="product" value="All Services Flyer">
-            <button type="submit">Request</button>
+            <input type="hidden" name="product" value="All Services Flyer" />
+            <button type="submit" class="button">Request</button>
           </form>
-
-          <script>
-  document.getElementById("zapierForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-    const form = e.target;
-    const data = new FormData(form);
-
-    fetch(form.action, {
-      method: "POST",
-      body: data,
-    }).then(() => {
-      window.location.href = "https://bughousesuccess.netlify.app/index.html";
-    }).catch((err) => {
-      alert("Oops! Something went wrong.");
-      console.error(err);
-    });
-  });
-</script>
-
         </div>
       </div>
-    </section>
-  </main>
+    </div>
 
-  <footer>
-    <p>© 2025 Bug House Pest Control — Live Healthier Today</p>
-  </footer>
+    
+  </main>
+<script>
+// Close modal on ESC key
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    document.querySelectorAll(".expand-checkbox").forEach(cb => cb.checked = false);
+    document.body.classList.remove('modal-open');
+  }
+});
+
+// Correct scroll lock toggle on checkbox change
+document.querySelectorAll('.expand-checkbox').forEach(cb => {
+  cb.addEventListener('change', () => {
+    const anyOpen = Array.from(document.querySelectorAll('.expand-checkbox')).some(input => input.checked);
+    document.body.classList.toggle('modal-open', anyOpen);
+  });
+});
+
+// Close modal on close button click
+document.querySelectorAll('.flyer-close-button').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const label = btn.closest('.flyer-expanded-view');
+    if (label) {
+      const inputId = label.getAttribute('for');
+      const input = document.getElementById(inputId);
+      if (input) input.checked = false;
+    }
+
+    const anyOpen = Array.from(document.querySelectorAll('.expand-checkbox')).some(input => input.checked);
+    document.body.classList.toggle('modal-open', anyOpen);
+  });
+});
+
+</script>
 </body>
 </html>
